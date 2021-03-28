@@ -41,7 +41,7 @@
     </nav>
 
     <!-- adding Modal to the page -->
-    <div id="loginModal" class="modal dafe" role="dialog">
+    <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -98,15 +98,81 @@
                         Reserve Table
                     </button> -->
                     <!-- OR / also adding a tooltip to the button-->
-                    <a role="button" class="btn btn-block nav-link btn-warning"
+                    <!-- <a role="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br> <strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reserveform">
+                            Reserve Table
+                    </a> -->
+
+                    <!-- turning the button into modal -->
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservationModal">
                             Reserve Table
                     </a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reservationModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row form-group">
+                            <label for="number-of-guests" class=" col-12 col-md-2 col-form-label">Number of Guests</label>
+                                <div class="col-12 col-md-10">
+                                    <input type="radio" id="one" name="no-of-guests" value="one">&nbsp;
+                                    <label for="one">1</label> &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="two" name="no-of-guests" value="two">&nbsp;
+                                    <label for="two">2</label> &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="three" name="no-of-guests" value="three">&nbsp;
+                                    <label for="three">3</label> &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="four" name="no-of-guests" value="four">&nbsp;
+                                    <label for="four">4</label> &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="five" name="no-of-guests" value="five">&nbsp;
+                                    <label for="five">5</label> &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="six" name="no-of-guests" value="six">&nbsp;
+                                    <label for="six">6</label>
+                                </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="section" class=" col-12 col-md-2 col-form-label">Section</label>
+                            <div class="col-12 col-md-10">
+                                <div class="btn-group" role="group">
+                                    <a role="button" class="btn btn-sm btn-success" href="#">Non-Smoking</a>
+                                    <a role="button" class="btn btn-sm btn-danger">Smoking</a>
+                                </div>
+                            </div>
+                        </div><br/>
+                        
+                        <div class="row form-group">
+                            <label for="date-and-time" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                                <div class="col-12 col-md-4">
+                                    <input type="date" class="form-control" id="date-and-time" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="time" class="form-control" id="date-and-time" name="time" placeholder="Time">
+                                </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-12 offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-secondary btn-md ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-md ml-auto" data-dismiss="modal">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- html body -->
     <div class="container">
         <!-- adding carousel component -->
@@ -202,7 +268,7 @@
             </div>
         </div>
         <!-- form -->
-        <div class="row row-content justify-content-center">
+        <!-- <div class="row row-content justify-content-center">
             <div class="col-auto">
                 <div class="card">
                     <h3 class="card-header bg-warning text-white">
@@ -250,7 +316,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <footer class="footer">
@@ -300,11 +366,11 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
-</script>
+</script> -->
 </body>
 
 </html>
