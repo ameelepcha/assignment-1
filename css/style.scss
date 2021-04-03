@@ -2,6 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$textColor-floralwhite: #fff;
 
 // Height variables
 $carousel-item-height: 300px;
@@ -56,6 +57,24 @@ body{
     padding: 10px;
 }
 
+.modal {
+    .modal-content {                            //to hide the white border around the modal
+        background-color: $background-dark;
+    }
+    .modal-header {
+        background-color: $background-dark;
+        .modal-title {
+            color: $textColor-floralwhite;
+        }
+        .close {
+            color: $textColor-floralwhite;
+        }
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
+}
 // we add a carousel class to illustrate the use of NESTING of classes in Scss
 .carousel {
     background:$background-dark;

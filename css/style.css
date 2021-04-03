@@ -37,6 +37,19 @@ body {
   border-bottom: 1px solid #ddd;
   padding: 10px; }
 
+.modal .modal-content {
+  background-color: #512DA8; }
+
+.modal .modal-header {
+  background-color: #512DA8; }
+  .modal .modal-header .modal-title {
+    color: #fff; }
+  .modal .modal-header .close {
+    color: #fff; }
+
+.modal-body {
+  background-color: #D1C4E9; }
+
 .carousel {
   background: #512DA8; }
   .carousel .carousel-item {
